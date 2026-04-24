@@ -1,0 +1,254 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* General Styles */
+body {
+    background: #111;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Backgrounds */
+.background {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(135deg, #1a1a1a, #000);
+    z-index: -2;
+}
+
+.gold-glow {
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle, rgba(255,223,0,0.18) 0%, transparent 70%);
+    z-index: -1;
+}
+
+/* Card */
+.card {
+    background: rgba(20, 20, 20, 0.92);
+    border-radius: 20px;
+    padding: 30px 24px;
+    max-width: 420px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 0 40px rgba(255, 223, 0, 0.28);
+}
+
+.luxury-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Profile */
+.profile-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 22px;
+}
+
+.profile-ring {
+  width: 120px;
+  height: 120px;
+  padding: 4px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ffd36a, #b88900);
+  box-shadow: 0 0 32px rgba(255, 200, 80, 0.45);
+}
+
+.profile-ring img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #0b0f1d;
+}
+
+/* Premium shimmer */
+.shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent 35%,
+    rgba(255,255,255,0.45),
+    transparent 65%
+  );
+  animation: shimmerMove 3.5s infinite;
+}
+
+@keyframes shimmerMove {
+  from { transform: translateX(-120%); }
+  to { transform: translateX(120%); }
+}
+
+
+/* Heading */
+.gold-text {
+    color: #FFD700;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+/* Trust */
+.trust {
+    color: #ffffff;
+    margin-bottom: 18px;
+    font-size: 14px;
+}
+
+/* WhatsApp Button */
+.telegram-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: linear-gradient(145deg, #25D366, #1ebe57);
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 14px 24px;
+    border-radius: 50px;
+    margin-bottom: 18px;
+    box-shadow:
+        0 0 15px #25D366,
+        0 0 30px rgba(37, 211, 102, 0.45);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* WhatsApp Icon */
+.tg-icon {
+    width: 22px;
+    height: 22px;
+    fill: #fff;
+    flex-shrink: 0;
+}
+
+/* Hover */
+.telegram-btn:hover {
+    transform: scale(1.06);
+    box-shadow:
+        0 0 24px #25D366,
+        0 0 50px rgba(37, 211, 102, 0.6);
+}
+
+/* Pulse Animation */
+@keyframes pulseGlow {
+    0% {
+        box-shadow:
+            0 0 10px #25D366,
+            0 0 20px rgba(37, 211, 102, 0.4);
+    }
+    50% {
+        box-shadow:
+            0 0 22px #25D366,
+            0 0 44px rgba(37, 211, 102, 0.65);
+    }
+    100% {
+        box-shadow:
+            0 0 10px #25D366,
+            0 0 20px rgba(37, 211, 102, 0.4);
+    }
+}
+
+.telegram-pulse {
+    animation: pulseGlow 2s infinite;
+}
+
+/* Live Viewers */
+.subscriber-box {
+    background: rgba(255,255,255,0.06);
+    border-radius: 15px;
+    padding: 12px 20px;
+    margin-bottom: 15px;
+}
+
+.subscriber-box .count {
+    font-weight: 700;
+    font-size: 1.4em;
+    color: #FFD700;
+}
+
+.subscriber-box .label {
+    display: block;
+    font-size: 0.85em;
+    margin-top: 4px;
+}
+
+/* Badges */
+.badge-row {
+    margin-bottom: 16px;
+}
+
+.badge {
+    display: inline-block;
+    background: #FFD700;
+    color: #111;
+    padding: 6px 12px;
+    margin: 3px;
+    border-radius: 14px;
+    font-weight: 600;
+    font-size: 0.8em;
+}
+
+/* Video */
+.video-wrapper {
+    margin-bottom: 18px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(255,215,0,0.25);
+}
+
+.video-wrapper video {
+    width: 100%;
+    display: block;
+    background: #000;
+}
+
+/* Features */
+.features {
+    text-align: left;
+    margin: 15px 0;
+    font-size: 14px;
+}
+
+.feature {
+    margin: 6px 0;
+}
+
+/* Disclaimer */
+.disclaimer {
+    font-size: 0.8em;
+    color: #ccc;
+    margin-top: 18px;
+}
+
+/* Footer */
+footer {
+    font-size: 0.75em;
+    margin-top: 18px;
+    color: #aaa;
+}
+
+footer a {
+    color: #25D366;
+    text-decoration: none;
+}
